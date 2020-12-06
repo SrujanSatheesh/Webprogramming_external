@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+table,tr, td
+{
+border: solid black;
+width: 33%;
+text-align: center;
+border-collapse: collapse;
+background-color:powderblue;
+}
+table { margin: auto; }
+</style>
+<script>
+var sumsq=0;
+var sumcu=0;
+var sq=0;
+var cu=0;
+var ans;
+document.write( "<table><tr><th colspan='4'> NUMBERS FROM 0 TO 10 WITH THEIR SQUARES AND CUBES </th></tr>" );
+document.write( "<tr><td>Number</td><td>Square</td><td>Cube</td><td>Sum</td></tr>" );
+for(var n=0; n<=10; n++)
+{
+cu=n*n*n;
+sq=n*n;
+ans=cu+sq;
+sumcu=sumcu+cu;
+sumsq=sumsq+sq;
+document.write( "<tr><td>" + n + "</td><td>" + sq + "</td><td>" + cu+ "</td><td>"+ans+"</td></tr>" ) ;
+}
+document.write("<tr><td>Sum</td><td>"+sumsq+"</td><td>"+sumcu+"</td><td>-----</td></tr>");
+document.write( "</table>" ) ;
+</script>
+</head>
+</html>
